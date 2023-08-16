@@ -1,10 +1,3 @@
----
-title: "Diabetes in PLHIV Word"
-
-output: word_document
----
-
-```{r setup, echo=TRUE, results='hide', warning=FALSE, message=FALSE, fig.show='hide'}
 
 #Importing Libraries
 library(readxl)
@@ -81,7 +74,7 @@ for (i in 1:length(ncd$Glucose)) {
 ncd$glucose = glucose
 
 
-#Defining the response variable : Diabetes (db)
+#defining the response variable : Diabetes (db)
 db = c()
 for (i in 1:521) {
   if (is.na(ncd$hba1c[i])){
@@ -521,5 +514,7 @@ f = edit_plot(f, row = c(1, 5, 9, 13, 17, 21),
 plot(f)
 
 
-```
+
+
+
 
